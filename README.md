@@ -1,10 +1,19 @@
 # Dry Bean Classification App
 
 This repository contains a Streamlit app for predicting dry bean varieties from 16 numeric bean shape features.
+The interface uses a mission-control style dashboard with a clickable orbital viewport that captures targeted cursor points.
+
+## UI Highlights
+
+- Clickable target viewport for capturing cursor coordinates.
+- Live target X/Y display with estimated latitude, longitude, sector, and lock confidence.
+- Target acquisition log that stores the latest clicked points.
+- Advanced classifier control panel grouped by feature categories.
+- SVC decision-score table and styled prediction output.
 
 ## Project Files
 
-- `app.py` - Streamlit web app for making predictions.
+- `app.py` - Streamlit web app with target capture and model predictions.
 - `bean_classifier_model.pkl` - trained SVC classification model.
 - `bean_scaler.pkl` - fitted `StandardScaler` used before prediction.
 - `label_encoder.pkl` - fitted label encoder for converting model output to bean class names.
@@ -71,6 +80,14 @@ Start the app:
 ```bash
 streamlit run app.py
 ```
+
+Open the local URL shown by Streamlit, usually:
+
+```text
+http://localhost:8501
+```
+
+Click inside the orbital viewport to capture a target point. The left panel updates with the cursor X/Y position, estimated map coordinates, sector, and lock confidence.
 
 ## Push to GitHub
 
