@@ -89,6 +89,19 @@ http://localhost:8501
 
 Click inside the orbital viewport to capture a target point. The left panel updates with the cursor X/Y position, estimated map coordinates, sector, and lock confidence.
 
+## Streamlit Community Cloud
+
+If deployment gets stuck while installing `pandas`, `pillow`, or `scikit-learn`, check the Python version in Streamlit Cloud.
+
+Recommended deployment setting:
+
+```text
+Python version: 3.12
+Main file path: app.py
+```
+
+In Streamlit Community Cloud, open the app deployment settings, go to **Advanced settings**, and select Python `3.12`. This is the safest version for the saved scikit-learn model artifacts.
+
 ## Push to GitHub
 
 If this folder is not already a Git repository, initialize it:
